@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            font-weight: bold;
+            text-align: center;
+            color: #000;
+            font-size: 50px;
+            text-decoration: double underline;
+        }
+        #keypad {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+        #keypad div{
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .drum{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Drum 🥁 Kit</h1>
+    <div id="keypad">
+        <button id="keyW" class="Drum">W <img src="/AUDIO/image/crash.png" height="90px" width="90px"></button>
+        <button id="keyA" class="Drum">A <img src="/AUDIO/image/kick.png" height="90px" width="90px"></button>
+        <button id="keyS" class="Drum">S <img src="/AUDIO/image/snare.png" height="90px" width="90px"></button>
+        <button id="keyD" class="Drum">D <img src="/AUDIO/image/tom1.png" height="90px" width="90px"></button>
+        <button id="keyJ" class="Drum">J <img src="/AUDIO/image/tom2.png" height="90px" width="90px"></button>
+        <button id="keyK" class="Drum">K <img src="/AUDIO/image/tom3.png" height="90px" width="90px"></button>
+        <button id="keyL" class="Drum">L <img src="/AUDIO/image/tom4.png" height="90px" width="90px"></button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

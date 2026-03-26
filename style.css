@@ -1,0 +1,110 @@
+ *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            background-color: #0e0e0e;
+            color: #f0f0f0;
+            font-family: 'DM Mono', monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            padding: 40px 20px;
+        }
+ 
+        .header {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 72px;
+            letter-spacing: 10px;
+            color: #f0f0f0;
+            line-height: 1;
+        }
+ 
+        .header span {
+            color: #ff3c3c;
+        }
+ 
+        #keypad {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+ 
+        .drum {
+            position: relative;
+            width: 110px;
+            height: 130px;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: transform 0.1s ease, background 0.15s ease, border-color 0.15s ease;
+            outline: none;
+            overflow: hidden;
+        }
+ 
+        .drum img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            opacity: 0.85;
+            transition: opacity 0.15s ease;
+            filter: grayscale(30%);
+        }
+ 
+        .key-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            letter-spacing: 2px;
+            color: #555;
+            transition: color 0.15s ease;
+        }
+ 
+        .drum:hover {
+            background: #222;
+            border-color: #444;
+        }
+ 
+        .drum:hover img {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+ 
+        .drum:hover .key-label {
+            color: #888;
+        }
+ 
+        /* Active / pressed state */
+        .drum.pressed {
+            transform: scale(0.93);
+            background: #1e1e1e;
+            border-color: #ff3c3c;
+            box-shadow: 0 0 18px rgba(255, 60, 60, 0.25);
+        }
+ 
+        .drum.pressed .key-label {
+            color: #ff3c3c;
+        }
+ 
+        .drum.pressed img {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+ 
+        .hint {
+            font-size: 11px;
+            color: #333;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
